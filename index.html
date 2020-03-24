@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<link rel="apple-touch-icon" type="image/png" href="https://static.codepen.io/assets/favicon/apple-touch-icon-5ae1a0698dcc2402e9712f7d01ed509a57814f994c660df9f7a952f3060705ee.png" />
+<meta name="apple-mobile-web-app-title" content="CodePen">
+<link rel="shortcut icon" type="image/x-icon" href="https://static.codepen.io/assets/favicon/favicon-aec34940fbc1a6e787974dcd360f2c6b63348d4b1f4e06c77743096d55480f33.ico" />
+<link rel="mask-icon" type="" href="https://static.codepen.io/assets/favicon/logo-pin-8f3771b1072e3c38bd662872f6b673a722f4b3ca2421637d5596661b4e2132cc.svg" color="#111" />
+<title>CodePen - 2029-5</title>
+<style>
+body{
+  background:white;
+}
+
+#brain{
+  position:absolute;
+  left:0px;
+  top: 60px;
+}
+
+input{
+  width:107px;
+  height:16px;
+}
+
+input:focus{
+  border-color:#ff29d8;
+}
+
+.correct{
+  background:#38ff50;
+}
+
+.incorrect{
+  background: #ff2929;
+}
+</style>
+</head>
+<body translate="no">
+<h1> Anatomy of the Human Brain: <h1 />
+<img id="brain" src="https://i.pinimg.com/originals/04/c6/2d/04c62dfa658ba67a43e677c90c744533.jpg">
+<input style="position:absolute; left: 52px; top:105px;" type="text" data-correct="Frontal Lobe" />
+<input style="position:absolute; left: 443px; top:108px;" type="text" data-correct="Parietal Lobe" />
+<input style="position:absolute; left: 464px; top:195px;" type="text" data-correct="Occipital Lobe" />
+<input style="position:absolute; left: 444px; top:427px;" type="text" data-correct="Cerebellum" />
+<input style="position:absolute; left: 444px; top:427px;" type="text" data-correct="Cerebellum" />
+<input style="position:absolute; left: 143px; top:455px;" type="text" data-correct="Brain Stem" />
+<input style="position:absolute; left: 81px; top:403px;" type="text" data-correct="Temporal Lobe" />
+<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js'></script>
+<script id="rendered-js">
+console.clear();
+console.log("Hello World");
+
+$("input").change(onChange);
+function onChange(evt){
+  let correct = $(this).data("correct");
+  let answer = $(this).val();
+  if(correct==answer){
+    $(this).removeClass("incorrect").addClass("correct")
+  } else{
+$(this).removeClass("correct").addClass("incorrect")
+  }
+}
+    </script>
+</body>
+</html>
